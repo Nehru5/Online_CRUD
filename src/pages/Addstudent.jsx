@@ -1,11 +1,14 @@
 import React,{useState} from 'react'
 import Navbar from '../components/Navbar'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 const Addstudent = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [department,setDepartment] = useState("")
   const [course, setCourse] = useState("")
+
+  const navigate = useNavigate()
 
   function addStudent(e){
     e.preventDefault()
@@ -17,6 +20,7 @@ const Addstudent = () => {
       setEmail("")
       setDepartment("")
       setCourse("")
+      navigate("/viewstudent")
     })
     .catch((err)=>console.log(err))
 

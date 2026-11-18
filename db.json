@@ -13,6 +13,20 @@
       "department": "CSE",
       "course": "MERN",
       "id": "SjVuCAM3IGU"
+    },
+    {
+      "name": "Ganesh",
+      "email": "Ganesh@gmail.com",
+      "department": "MECH",
+      "course": "Data Analytics",
+      "id": "M7TJiANoo3U"
+    },
+    {
+      "name": "Sanjay",
+      "email": "Sanjay@gmail.com",
+      "department": "ECE",
+      "course": "Python",
+      "id": "vh6WN1unRhE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
