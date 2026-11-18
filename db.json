@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "name": "Kiran",
+      "email": "Kiran@gmail.com",
+      "department": "CSE",
+      "course": "Java",
+      "id": "CcOYHyyxb40"
+    },
+    {
+      "name": "Amith",
+      "email": "Amith@gmail.com",
+      "department": "CSE",
+      "course": "MERN",
+      "id": "SjVuCAM3IGU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
