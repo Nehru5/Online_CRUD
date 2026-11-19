@@ -1,4 +1,15 @@
-Routings:
-1. Activate Routing for the App component
-2. Create path for the pages/components
-3. Create Link
+1. What is React js and list its features?
+2. What is virtual DOM and explain how it works?
+3. What is Single Page Application?
+4. What is JSX and Babel JS?
+5. What is Component?and Difference between Types of Component?
+6. What are Props?
+7. What are Hooks? and Name some hooks
+8. How to manage states in Function based Component?
+9. What is Conditional Rendering?
+10. What is useRef?
+11. What is the difference between state and props?
+12. What is useEffect()?
+13. What is controlled and uncontrolled components?
+14. what is useParams()
+15. Explain Routers?
