@@ -1,16 +1,48 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Navbar from '../components/Navbar'
+import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 const UpdateStudent = () => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [department,setDepartment] = useState("")
     const [course, setCourse] = useState("")
+
+    const {id} = useParams()
+    console.log(id);
+
+    let navigate = useNavigate()
+
+    useEffect(()=>{
+          axios.get(`http://localhost:4000/students/${id}`)
+          .then(x=>{
+            setName(x.data.name)
+            setEmail(x.data.email)
+            setDepartment(x.data.department)
+            setCourse(x.data.course)
+          })
+          .catch(err=>console.log(err))
+    },[])
+
+    function handleUpdate(e){
+      e.preventDefault()
+      let newData = {name,email,department,course}
+      axios.put(`http://localhost:4000/students/${id}`,newData)
+      .then(()=>{
+            toast.success("Student Updated")
+            navigate("/viewstudent")
+      })
+      .catch(err=>console.log(err))
+    }
+    
   return (
     <>
     <Navbar/>
       <center><h1>Update Student</h1></center>
       <center>
-        <form>
+        <form onSubmit={handleUpdate}>
           <input 
           type="text" 
           placeholder='Enter Name' 

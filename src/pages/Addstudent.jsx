@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Navbar from '../components/Navbar'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 const Addstudent = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -15,14 +16,14 @@ const Addstudent = () => {
     let data = {name,email,department,course}
     axios.post("http://localhost:4000/students",data)
     .then(()=>{
-      alert("Student Added")
+      toast.success("Student Added")
       setName("")
       setEmail("")
       setDepartment("")
       setCourse("")
       navigate("/viewstudent")
     })
-    .catch((err)=>console.log(err))
+    .catch((err)=>toast.error("Failed to Add"))
 
   }
   return (

@@ -1,32 +1,11 @@
 {
   "students": [
     {
-      "name": "Kiran",
-      "email": "Kiran@gmail.com",
-      "department": "CSE",
-      "course": "Java",
-      "id": "CcOYHyyxb40"
-    },
-    {
       "name": "Amith",
       "email": "Amith@gmail.com",
       "department": "CSE",
-      "course": "MERN",
+      "course": "Python Fullstack",
       "id": "SjVuCAM3IGU"
-    },
-    {
-      "name": "Ganesh",
-      "email": "Ganesh@gmail.com",
-      "department": "MECH",
-      "course": "Data Analytics",
-      "id": "M7TJiANoo3U"
-    },
-    {
-      "name": "Sanjay",
-      "email": "Sanjay@gmail.com",
-      "department": "ECE",
-      "course": "Python",
-      "id": "vh6WN1unRhE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
